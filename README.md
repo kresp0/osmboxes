@@ -15,4 +15,4 @@ Where XX is the project number.
 
 After obtaining the files, you should add a link in the per task instructions like this:
 
-[Download the data for this area](http://your-server.com/osmdata-{x}-{y}.osm) and open it with JOSM.
+[Download and open with JOSM the data for this area](http://127.0.0.1:8111/import?url=http://your-server.com/osmdata-{x}-{y}.osm)
