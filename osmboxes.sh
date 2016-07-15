@@ -15,7 +15,6 @@ while IFS='' read -r linea || [[ -n "$linea" ]]; do
 	perl -pe 's/\[\[\[\[/XXXXX\n/' /tmp/linea | perl -pe 's/\]\]\]\]/\nXXXX/g' | grep -v XXXX | tr -d '[],' | perl -pe 's/ /\n/g' | sort -nu | perl -pe 's/\n/,/g' > /tmp/coordenadas
 	BOX=`awk -F ',' '{print $1","$3","$2","$4}' /tmp/coordenadas`
 	FILE=$NAME-$X-$Y.osm
-echo $FILE
+	echo $FILE
 	osmconvert $1 -b=$BOX -o=$FILE
-
 done < /tmp/tareas
